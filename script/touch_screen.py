@@ -10,11 +10,9 @@ class TouchScreen(QWidget):
         self.initUI()
     
     def initUI(self):
-        # Initialize ROS node
         rospy.init_node('touch_screen', anonymous=True)
         self.floor_pub = rospy.Publisher('selected_floor', Int32, queue_size=10)
-        
-        # Create a vertical box layout
+
         vbox = QVBoxLayout()
         
         for i in range(1, 10):
