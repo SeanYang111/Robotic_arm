@@ -24,5 +24,5 @@ A project for 601
 ![image](https://github.com/SeanYang111/Robotic_arm/assets/90599095/c25529b1-0f19-467c-a085-e62156edac5c)
 3. I wrote a python script to simulate the touch screen. It has 9 buttons on it. I use PyQt5 to create a window and buttons.
    (resource: https://pypi.org/project/PyQt5/)   
-   * Right now the topic contains the message of the buttons I press. And I'm still trying to find a way to let the robotic arm reveive the message.
+   * Right now the topic contains the message of the buttons I press. And I'm still trying to find a way to let the robotic arm receive the message.
 ![image](https://github.com/SeanYang111/Robotic_arm/assets/90599095/d38a8fad-9c00-44cf-846e-b4d7952651e9)
