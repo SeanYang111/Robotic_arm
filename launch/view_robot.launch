@@ -1,15 +1,11 @@
 <launch>
-  <!-- Load the URDF into the ROS Parameter Server -->
   <param name="robot_description"
          command="$(find xacro)/xacro --inorder '$(find my_robotic_arm_description)/urdf/my_robotic_arm.urdf'" />
 
-  <!-- Use the joint_state_publisher_gui to move the joints -->
   <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
   
-  <!-- Use robot_state_publisher to publish the robot's state -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
   
-  <!-- Launch Rviz -->
   <node name="rviz" pkg="rviz" type="rviz" args="-d /home/sean/catkin_ws/src/my_robotic_arm_description/Robotic_arm.rviz"/>
 </launch>
 
