@@ -1,0 +1,38 @@
+# Publish joint_states
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+# Position controllers for the revolute joints
+joint1_position_controller:
+  type: effort_controllers/JointPositionController
+  joint: joint1
+  pid: {p: 100.0, i: 0.1, d: 10.0}
+
+joint2_position_controller:
+  type: effort_controllers/JointPositionController
+  joint: joint2
+  pid: {p: 100.0, i: 0.1, d: 10.0}
+
+joint3_position_controller:
+  type: effort_controllers/JointPositionController
+  joint: joint3
+  pid: {p: 100.0, i: 0.1, d: 10.0}
+
+# Position controller for the prismatic joint
+prismatic_joint_position_controller:
+  type: effort_controllers/JointPositionController
+  joint: prismatic_joint
+  pid: {p: 100.0, i: 10, d: 10.0}
+
+# Controller list
+controller_list:
+  - name: joint1_position_controller
+    action_namespace: joint1
+  - name: joint2_position_controller
+    action_namespace: joint2
+  - name: joint3_position_controller
+    action_namespace: joint3
+  - name: prismatic_joint_position_controller
+    action_namespace: prismatic_joint
+
