@@ -14,19 +14,19 @@ A project for 601
 * Wheelchair
 ## How it works
 1. A user interface:   
-   We use PyQt5 to simulate a GUI for users. There're five buttons on it. When a user click one button, it will establish a ROS topic, sending the "floor imformation" to the topic, and waiting for a subscriber to receive it.
+   We use PyQt5 to simulate a GUI for users. There're five buttons on it. When a user click one button, it will establish a ROS topic, sending the "floor imformation" to the topic, and waiting for a subscriber to receive it.   
 <img width="179" alt="image" src="https://github.com/SeanYang111/Robotic_arm/assets/90599095/d0861c20-9911-472b-a129-d0183d952ccd">
 
 2. Start the MOveit:   
-   Moveit is an open-soucrce platform which allows users to plan the robot's movement path. We set our joints as a group called "arm". Launch the file "move_group.launch" will avtivate moveit, so that users can start planing the path for the robotic arm.
+   Moveit is an open-soucrce platform which allows users to plan the robot's movement path. We set our joints as a group called "arm". Launch the file "move_group.launch" will avtivate moveit, so that users can start planing the path for the robotic arm.   
    <img width="293" alt="image" src="https://github.com/SeanYang111/Robotic_arm/assets/90599095/44c5261c-a71a-48fc-a69f-f0a4be089897">
 
 3. Run the control node:   
-   We create another node, receiving the message from the topic created by the user interface. Then according to the floor the user choose, it will create a certain list for the group "arm", setting a specific angle for revolution joints and length for prismetic joints. Then this list will be sent to moveit to plan the robotic arm's movement.
+   We create another node, receiving the message from the topic created by the user interface. Then according to the floor the user choose, it will create a certain list for the group "arm", setting a specific angle for revolution joints and length for prismetic joints. Then this list will be sent to moveit to plan the robotic arm's movement.   
    ![image](https://github.com/SeanYang111/Robotic_arm/assets/90599095/89e7e322-88ba-424d-94a9-663d5a94e534)
 
 4. Rviz simulation and Gazebo :   
-   After planning the path, Moveit can send the result on a simulation platform called "Rviz". In Rviz, we can see the results of planing path for the robotic arm. In the meanwhile, the result will be sent to a real-world simulation platform calledf "Gazebo". Ideally, the result on Rviz and Gazebo should be the same. If not, we should adjust the PID controller for Gazebo simulation.
+   After planning the path, Moveit can send the result on a simulation platform called "Rviz". In Rviz, we can see the results of planing path for the robotic arm. In the meanwhile, the result will be sent to a real-world simulation platform calledf "Gazebo". Ideally, the result on Rviz and Gazebo should be the same. If not, we should adjust the PID controller for Gazebo simulation.   
 <img width="349" alt="image" src="https://github.com/SeanYang111/Robotic_arm/assets/90599095/3bc8ed42-7cff-46e8-8de6-bcbb286bb71c">
 <img width="262" alt="image" src="https://github.com/SeanYang111/Robotic_arm/assets/90599095/041b1d3e-50ee-47d5-beec-ea4e48903b0d">
 
