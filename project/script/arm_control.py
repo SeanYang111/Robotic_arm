@@ -20,8 +20,7 @@ class RoboticArmControl:
         self.move_robotic_arm(data.data)
 
     def move_robotic_arm(self, floor_number):
-        # Example logic to adjust the joints based on the selected floor
-        # Note: These positions are hypothetical. You need to adjust them based on your robot's configuration
+       
         joint_goal = self.arm_group.get_current_joint_values()
         
         if floor_number == 1:
@@ -30,8 +29,6 @@ class RoboticArmControl:
             joint_goal[2] = 0.47  # Third joint
             pris = 0.16  # Extendable part (prismatic joint)
 
-        # Add conditions for other floors...
-        # The following are just placeholders:
         elif floor_number == 2:
             joint_goal[0] = 0
             joint_goal[1] = 1.24
@@ -61,7 +58,6 @@ class RoboticArmControl:
         self.arm_group.set_max_velocity_scaling_factor(1.0)
         joint_goal[3] = pris
         self.arm_group.go(joint_goal, wait=True)
-        # Hold the position for a second
         # Retract the prismatic joint back to 0
         self.arm_group.set_max_velocity_scaling_factor(1.0)
         joint_goal[3] = 0
