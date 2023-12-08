@@ -32,3 +32,9 @@ A project for 601
 
 ![image](https://github.com/SeanYang111/Robotic_arm/assets/90599095/9bbd5fa4-b7f0-4893-88db-b2cc7b91b8fe)
 (The reason why the robotic arm model on gazebo is all grey is that we use URDF format to write the robotic model. However, Gazebo is using SDF format, and Gazebo has a limitation in converting URDF to SDF. It's Gazebo's native object description format. This means that Gazebo may not read the material color in URDF. We've tried every methods but it still doesn't work. Luckily in Rviz, it works perfectly.)
+
+5. Demo :
+   
+
+https://github.com/SeanYang111/Robotic_arm/assets/90599095/2b2a8bb9-bb54-42fc-9726-0b270130699f
+
